@@ -38,6 +38,14 @@ int main(){
         cout<< i <<endl;
     }
 
+    // Deletion of the vectors
+    // {10, 20, 12, 23}
+    v.erase(v.begin() + 1); // delete the address/element of the [1] index and reshuffule
+    // Erasing multiple addresses 
+    // {10, 20, 12, 23, 35}
+    v.erase(v.begin() + 2 , v.begin() + 4); // [start, end),{10, 20, 35} start included and end is not, it basically deletes the element at [2]= 12 index and [3]= 23 and include [4]= 35
+
+
     return 0;
 
 }
