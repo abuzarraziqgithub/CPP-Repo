@@ -45,6 +45,25 @@ int main(){
     // {10, 20, 12, 23, 35}
     v.erase(v.begin() + 2 , v.begin() + 4); // [start, end),{10, 20, 35} start included and end is not, it basically deletes the element at [2]= 12 index and [3]= 23 and include [4]= 35
 
+    // Insertion of Vectors
+    vector<int> g(2,100);
+    g.insert(g.begin(), 300); // {300, 100, 100}
+    g.insert(g.begin() + 1, 2, 10); // {300. 10, 10, 100, 100}
+
+    // Copy vector
+    vector<int> c(2,50); // {50, 50}
+    g.insert(g.begin(), c.begin(), c.end());  // {50, 50, 300, 10, 10, 100}
+
+    // Size of vector
+    g.size(); // 5
+    // pop back
+    g.pop_back(); // remove the last element{100}
+    // swapping
+    g.swap(v); // v -> {50, 50, 300, 10, 10}, g -> {1,2,3,4,5,6,7,8,9}
+    // Clear -> trims it down to the empty vector
+    g.clear(); // erases everything 
+    // empty(boolean)
+    g.empty(); // false, not empty 
 
     return 0;
 
