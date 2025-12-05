@@ -74,11 +74,16 @@ class Solution2{
         //     runningSum += nums[i];    
         //     answerArr.push_back(runningSum);
         // }
-        for(int i = 0; i < nums.size(); i++){
-            runningSum += nums[i];
-            nums[i] = runningSum;
+        // for(int i = 0; i < nums.size(); i++){
+        //     runningSum += nums[i];
+        //     nums[i] = runningSum;
+        // }
+        // return nums;
+
+
+        for(int i = 1; i < nums.size(); i++){
+            nums[i] = nums[i] + nums[i - 1];
         }
-        return nums;
 
     }
 
@@ -108,6 +113,5 @@ int main() {
         cout << num << " ";
     }
     cout << endl;
-
 
 }
