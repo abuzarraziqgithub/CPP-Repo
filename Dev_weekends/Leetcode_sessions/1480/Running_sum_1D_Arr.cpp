@@ -67,18 +67,21 @@ class Solution2{
     public:
     vector<int> runningSum(vector<int>& nums){
 
-        vector<int> answerArr;
+        // vector<int> answerArr;
         int runningSum = 0;
         
-        for(int i = 0; i <= nums.size() - 1; i++){
-            runningSum += nums[i];    
-            answerArr.push_back(runningSum);
+        // for(int i = 0; i <= nums.size() - 1; i++){
+        //     runningSum += nums[i];    
+        //     answerArr.push_back(runningSum);
+        // }
+        for(int i = 0; i < nums.size(); i++){
+            runningSum += nums[i];
+            nums[i] = runningSum;
         }
-        return answerArr;
+        return nums;
 
     }
 
-    // Home Work - Try to sum the next value with the previous one(not all previous)
     
     
 };
